@@ -3,16 +3,16 @@
 A simple Laravel application demonstrating various techniques for working with APIs.
 
 ## Requirements
-     
+
 * PHP 8.2
-* PDO/MySQL|PostgreSQL|Sqlite
 * A basic familiarity with Laravel
  
 ## Installation
 
 ~~~
-git clone https://github.com/inveteratus/widget-api.git .
+git clone https://github.com/inveteratus/widget-api.git
 cd widget-api
+composer install
 cp .env.example .env
 php artisan key:generate
 
