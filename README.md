@@ -15,9 +15,7 @@ cd widget-api
 composer install
 cp .env.example .env
 php artisan key:generate
-
-# edit .env to suit
-
+touch database/database.sqlite
 php artisan migrate:fresh
 php artisan serve
 ~~~
