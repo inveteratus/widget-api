@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\WidgetController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::apiResource('widget', WidgetController::class);
+
+Route::middleware('jwt.auth')->get('debug', function (Request $request) {
+    return print_r(['jwt' => $request->get('jwt')], true);
+});
